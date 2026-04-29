@@ -440,33 +440,33 @@
         </section>
 
 
-        <section>
-            <h3 style="font-size:40px;vertical-align:top;text-align:left;height:50px">Rotações</h3>
-            <h3 style="font-size:25px;vertical-align:top;text-align:left;height:50px"><b class="ttext">Matriz de Rotação</b></h3>
-            <div style="width:1200px;height:800px">
-                <div style="width: 60%; float:left; font-size:25px; text-align:justify; text-justify: inter-word">
-                    <p>No <b class="itext">UAIBot</b> é possível calcular o eixo e o ângulo (em radianos) de uma matriz de rotação usando a função <b class="itext">Utils.axis_angle</b>:</p>
-                    <pre><code class="language-python" style="text-align:left">
-import numpy as np
-import uaibot as ub
-
-Q = np.array([[0,-1,0],[1,0,0],[0,0,1]])
-axis, angle = ub.Utils.axis_angle(Q)
-
-print(axis) #Imprime [0. 0. 1.]
-print(angle) #Imprime 1.570 rad
-                        </code></pre>
-                    <p>Note que o eixo é escrito em um referencial genérico \(\mathcal{F}_0\). O eixo é contextualizado quando aplicamos a matriz de rotação a um ponto \(p\) escrito em um referencial específico.</p>
-                </div>
-                <div style="width: 5%; float:left; font-size:25px; text-align:justify; text-justify: inter-word"></div>
-                <div style="width: 35%; float:right; text-align:left; vertical-align: middle; display:table">
-                    <div style="display:table-cell;vertical-align: middle">
-                        <img src="./images/aula2/titulo.svg"
-                             style="width:400px;height:auto;">
-                    </div>
-                </div>
-            </div>
-        </section>
+<!--         <section> -->
+<!--             <h3 style="font-size:40px;vertical-align:top;text-align:left;height:50px">Rotações</h3> -->
+<!--             <h3 style="font-size:25px;vertical-align:top;text-align:left;height:50px"><b class="ttext">Matriz de Rotação</b></h3> -->
+<!--             <div style="width:1200px;height:800px"> -->
+<!--                 <div style="width: 60%; float:left; font-size:25px; text-align:justify; text-justify: inter-word"> -->
+<!--                     <p>No <b class="itext">UAIBot</b> é possível calcular o eixo e o ângulo (em radianos) de uma matriz de rotação usando a função <b class="itext">Utils.axis_angle</b>:</p> -->
+<!--                     <pre><code class="language-python" style="text-align:left"> -->
+<!-- import numpy as np -->
+<!-- import uaibot as ub -->
+<!---->
+<!-- Q = np.array([[0,-1,0],[1,0,0],[0,0,1]]) -->
+<!-- axis, angle = ub.Utils.axis_angle(Q) -->
+<!---->
+<!-- print(axis) #Imprime [0. 0. 1.] -->
+<!-- print(angle) #Imprime 1.570 rad -->
+<!--                         </code></pre> -->
+<!--                     <p>Note que o eixo é escrito em um referencial genérico \(\mathcal{F}_0\). O eixo é contextualizado quando aplicamos a matriz de rotação a um ponto \(p\) escrito em um referencial específico.</p> -->
+<!--                 </div> -->
+<!--                 <div style="width: 5%; float:left; font-size:25px; text-align:justify; text-justify: inter-word"></div> -->
+<!--                 <div style="width: 35%; float:right; text-align:left; vertical-align: middle; display:table"> -->
+<!--                     <div style="display:table-cell;vertical-align: middle"> -->
+<!--                         <img src="./images/aula2/titulo.svg" -->
+<!--                              style="width:400px;height:auto;"> -->
+<!--                     </div> -->
+<!--                 </div> -->
+<!--             </div> -->
+<!--         </section> -->
 
         <section>
             <h3 style="font-size:40px;vertical-align:top;text-align:left;height:50px">Rotações</h3>
@@ -572,62 +572,62 @@ print(angle) #Imprime 1.570 rad
             </div>
         </section>
 
-        <section>
-            <h3 style="font-size:40px;vertical-align:top;text-align:left;height:50px">Rotações</h3>
-            <h3 style="font-size:25px;vertical-align:top;text-align:left;height:50px"><b class="ttext">Rotações no UAIBot</b></h3>
-            <div style="width:1200px;height:800px">
-                <div style="width: 60%; float:left; font-size:25px; text-align:justify; text-justify: inter-word">
-                    <p>No <b class="itext">UAIBot</b>, as rotações elementares estão implementadas:</p>
-                    <p>
-                    <pre><code class="language-python" style="text-align:left">
-import uaibot as ub
+<!--         <section> -->
+<!--             <h3 style="font-size:40px;vertical-align:top;text-align:left;height:50px">Rotações</h3> -->
+<!--             <h3 style="font-size:25px;vertical-align:top;text-align:left;height:50px"><b class="ttext">Rotações no UAIBot</b></h3> -->
+<!--             <div style="width:1200px;height:800px"> -->
+<!--                 <div style="width: 60%; float:left; font-size:25px; text-align:justify; text-justify: inter-word"> -->
+<!--                     <p>No <b class="itext">UAIBot</b>, as rotações elementares estão implementadas:</p> -->
+<!--                     <p> -->
+<!--                     <pre><code class="language-python" style="text-align:left"> -->
+<!-- import uaibot as ub -->
+<!---->
+<!-- theta=3.14/2 -->
+<!-- Rx = ub.Utils.rotx(theta) -->
+<!-- Ry = ub.Utils.roty(theta) -->
+<!-- Rz = ub.Utils.rotz(theta) -->
+<!--                         </code></pre> -->
+<!--                     </p> -->
+<!--                     <p>Neste caso, as matrizes serão 4x4 em vez de 3x3, mas você pode recuperar as matrizes de rotação descartando a última linha e a última coluna. O motivo pelo qual essas matrizes estão embutidas na matriz 4x4 ficará claro em breve.</p> -->
+<!--                 </div> -->
+<!--                 <div style="width: 5%; float:right; text-align:left; vertical-align: middle; display:table"></div> -->
+<!--                 <div style="width: 35%; float:right; text-align:left; vertical-align: middle; display:table"> -->
+<!--                     <div style="display:table-cell;vertical-align: middle"> -->
+<!--                         <img src="./images/aula2/titulo.svg" -->
+<!--                              style="width:400px;height:auto;"> -->
+<!--                     </div> -->
+<!--                 </div> -->
+<!--             </div> -->
+<!--         </section> -->
 
-theta=3.14/2
-Rx = ub.Utils.rotx(theta)
-Ry = ub.Utils.roty(theta)
-Rz = ub.Utils.rotz(theta)
-                        </code></pre>
-                    </p>
-                    <p>Neste caso, as matrizes serão 4x4 em vez de 3x3, mas você pode recuperar as matrizes de rotação descartando a última linha e a última coluna. O motivo pelo qual essas matrizes estão embutidas na matriz 4x4 ficará claro em breve.</p>
-                </div>
-                <div style="width: 5%; float:right; text-align:left; vertical-align: middle; display:table"></div>
-                <div style="width: 35%; float:right; text-align:left; vertical-align: middle; display:table">
-                    <div style="display:table-cell;vertical-align: middle">
-                        <img src="./images/aula2/titulo.svg"
-                             style="width:400px;height:auto;">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h3 style="font-size:40px;vertical-align:top;text-align:left;height:50px">Rotações</h3>
-            <h3 style="font-size:25px;vertical-align:top;text-align:left;height:50px"><b class="ttext">Rotações no UAIBot</b></h3>
-            <div style="width:1200px;height:800px">
-                <div style="width: 60%; float:left; font-size:25px; text-align:justify; text-justify: inter-word">
-                    <p>Rotações em torno de um eixo arbitrário \(r\) e um ângulo \(\theta\) também estão implementadas</p>
-                    <p>
-                    <pre><code class="language-python" style="text-align:left">
-import uaibot as ub
-
-theta=3.14/2
-r = [1,2,3]
-
-R = ub.Utils.rot(r, theta)
-                        </code></pre>
-                    </p>
-                    <p>O eixo \(r\), se não estiver normalizado, é normalizado internamente na função. O comprimento do vetor \(r\) não importa.</p>
-                    <p>Como antes, as matrizes serão 4x4 em vez de 3x3, mas, novamente, você pode recuperar as matrizes de rotação descartando a última linha e a última coluna.</p>
-                </div>
-                <div style="width: 5%; float:right; text-align:left; vertical-align: middle; display:table"></div>
-                <div style="width: 35%; float:right; text-align:left; vertical-align: middle; display:table">
-                    <div style="display:table-cell;vertical-align: middle">
-                        <img src="./images/aula2/titulo.svg"
-                             style="width:400px;height:auto;">
-                    </div>
-                </div>
-            </div>
-        </section>
+<!--         <section> -->
+<!--             <h3 style="font-size:40px;vertical-align:top;text-align:left;height:50px">Rotações</h3> -->
+<!--             <h3 style="font-size:25px;vertical-align:top;text-align:left;height:50px"><b class="ttext">Rotações no UAIBot</b></h3> -->
+<!--             <div style="width:1200px;height:800px"> -->
+<!--                 <div style="width: 60%; float:left; font-size:25px; text-align:justify; text-justify: inter-word"> -->
+<!--                     <p>Rotações em torno de um eixo arbitrário \(r\) e um ângulo \(\theta\) também estão implementadas</p> -->
+<!--                     <p> -->
+<!--                     <pre><code class="language-python" style="text-align:left"> -->
+<!-- import uaibot as ub -->
+<!---->
+<!-- theta=3.14/2 -->
+<!-- r = [1,2,3] -->
+<!---->
+<!-- R = ub.Utils.rot(r, theta) -->
+<!--                         </code></pre> -->
+<!--                     </p> -->
+<!--                     <p>O eixo \(r\), se não estiver normalizado, é normalizado internamente na função. O comprimento do vetor \(r\) não importa.</p> -->
+<!--                     <p>Como antes, as matrizes serão 4x4 em vez de 3x3, mas, novamente, você pode recuperar as matrizes de rotação descartando a última linha e a última coluna.</p> -->
+<!--                 </div> -->
+<!--                 <div style="width: 5%; float:right; text-align:left; vertical-align: middle; display:table"></div> -->
+<!--                 <div style="width: 35%; float:right; text-align:left; vertical-align: middle; display:table"> -->
+<!--                     <div style="display:table-cell;vertical-align: middle"> -->
+<!--                         <img src="./images/aula2/titulo.svg" -->
+<!--                              style="width:400px;height:auto;"> -->
+<!--                     </div> -->
+<!--                 </div> -->
+<!--             </div> -->
+<!--         </section> -->
 
         <section>
             <h3 style="font-size:40px;vertical-align:top;text-align:left;height:50px">Rotações</h3>
@@ -652,33 +652,33 @@ R = ub.Utils.rot(r, theta)
             </div>
         </section>
 
-        <section>
-            <h3 style="font-size:40px;vertical-align:top;text-align:left;height:50px">Rotações</h3>
-            <h3 style="font-size:25px;vertical-align:top;text-align:left;height:50px"><b class="ttext">Ângulos de Euler no UAIBot</b></h3>
-            <div style="width:1200px;height:800px">
-                <div style="width: 60%; float:left; font-size:25px; text-align:left">
-                    <p>No UAIBot, os ângulos de Euler podem ser calculados usando a função <b class="itext">Utils.euler_angles</b>
-                    </p>
-                    <p>
-                    <pre><code class="language-python" style="text-align:left">
-import uaibot as ub
-import numpy as np
-
-Q = np.array([[0,0,1],[1,0,0],[0,1,0]])
-alpha, beta, gamma = ub.Utils.euler_angles(Q)
-print([alpha, beta, gamma])
-                        </code></pre>
-                    </p>
-                </div>
-                <div style="width: 5%; float:left; font-size:25px; text-align:left"></div>
-                <div style="width: 35%; float:right; text-align:left; vertical-align: middle; display:table">
-                    <div style="display:table-cell;vertical-align: middle">
-                        <img src="./images/aula2/titulo.svg"
-                             style="width:400px;height:auto;">
-                    </div>
-                </div>
-            </div>
-        </section>
+<!--         <section> -->
+<!--             <h3 style="font-size:40px;vertical-align:top;text-align:left;height:50px">Rotações</h3> -->
+<!--             <h3 style="font-size:25px;vertical-align:top;text-align:left;height:50px"><b class="ttext">Ângulos de Euler no UAIBot</b></h3> -->
+<!--             <div style="width:1200px;height:800px"> -->
+<!--                 <div style="width: 60%; float:left; font-size:25px; text-align:left"> -->
+<!--                     <p>No UAIBot, os ângulos de Euler podem ser calculados usando a função <b class="itext">Utils.euler_angles</b> -->
+<!--                     </p> -->
+<!--                     <p> -->
+<!--                     <pre><code class="language-python" style="text-align:left"> -->
+<!-- import uaibot as ub -->
+<!-- import numpy as np -->
+<!---->
+<!-- Q = np.array([[0,0,1],[1,0,0],[0,1,0]]) -->
+<!-- alpha, beta, gamma = ub.Utils.euler_angles(Q) -->
+<!-- print([alpha, beta, gamma]) -->
+<!--                         </code></pre> -->
+<!--                     </p> -->
+<!--                 </div> -->
+<!--                 <div style="width: 5%; float:left; font-size:25px; text-align:left"></div> -->
+<!--                 <div style="width: 35%; float:right; text-align:left; vertical-align: middle; display:table"> -->
+<!--                     <div style="display:table-cell;vertical-align: middle"> -->
+<!--                         <img src="./images/aula2/titulo.svg" -->
+<!--                              style="width:400px;height:auto;"> -->
+<!--                     </div> -->
+<!--                 </div> -->
+<!--             </div> -->
+<!--         </section> -->
 
         <section>
             <h3 style="font-size:40px;vertical-align:top;text-align:left;height:50px">Rotações</h3>
@@ -1239,36 +1239,36 @@ print([alpha, beta, gamma])
             </div>
         </section>
 
-        <section>
-            <h3 style="font-size:40px;vertical-align:top;text-align:left;height:50px">Matriz de Transformação Homogênea</h3>
-            <h3 style="font-size:25px;vertical-align:top;text-align:left;height:50px"><b class="ttext">No UAIBot</b>
-            </h3>
-            <div style="width:1200px;height:800px">
-                <div style="width: 60%; float:left; font-size:25px; text-align:justify; text-justify: inter-word">
-                    <p>No <b class="itext">UAIBot</b>, estas quatro matrizes são implementadas com as funções <b class="itext">Utils.rotx, Utils.roty, Utils.rotz, Utils.trn</b></p>
-                    <pre><code class="language-python" style="text-align:left">
-import numpy as np
-import uaibot as ub
-
-theta=3.14/2
-s = [1,2,3]
-
-Rx = ub.Utils.rotx(theta)
-Ry = ub.Utils.roty(theta)
-Rz = ub.Utils.rotz(theta)
-D = ub.Utils.trn(s)
-                        </code></pre>
-                    <p>Agora está explicado o porquê de as matrizes de rotação serem 4x4 (e não 3x3): elas estão em sua forma de MTH.</p>
-                </div>
-                <div style="width: 5%; float:right; text-align:left; vertical-align: middle; display:table"></div>
-                <div style="width: 35%; float:right; text-align:left; vertical-align: middle; display:table">
-                    <div style="display:table-cell;vertical-align: middle">
-                        <img src="./images/aula2/titulo.svg"
-                             style="width:400px;height:auto;">
-                    </div>
-                </div>
-            </div>
-        </section>
+<!--         <section> -->
+<!--             <h3 style="font-size:40px;vertical-align:top;text-align:left;height:50px">Matriz de Transformação Homogênea</h3> -->
+<!--             <h3 style="font-size:25px;vertical-align:top;text-align:left;height:50px"><b class="ttext">No UAIBot</b> -->
+<!--             </h3> -->
+<!--             <div style="width:1200px;height:800px"> -->
+<!--                 <div style="width: 60%; float:left; font-size:25px; text-align:justify; text-justify: inter-word"> -->
+<!--                     <p>No <b class="itext">UAIBot</b>, estas quatro matrizes são implementadas com as funções <b class="itext">Utils.rotx, Utils.roty, Utils.rotz, Utils.trn</b></p> -->
+<!--                     <pre><code class="language-python" style="text-align:left"> -->
+<!-- import numpy as np -->
+<!-- import uaibot as ub -->
+<!---->
+<!-- theta=3.14/2 -->
+<!-- s = [1,2,3] -->
+<!---->
+<!-- Rx = ub.Utils.rotx(theta) -->
+<!-- Ry = ub.Utils.roty(theta) -->
+<!-- Rz = ub.Utils.rotz(theta) -->
+<!-- D = ub.Utils.trn(s) -->
+<!--                         </code></pre> -->
+<!--                     <p>Agora está explicado o porquê de as matrizes de rotação serem 4x4 (e não 3x3): elas estão em sua forma de MTH.</p> -->
+<!--                 </div> -->
+<!--                 <div style="width: 5%; float:right; text-align:left; vertical-align: middle; display:table"></div> -->
+<!--                 <div style="width: 35%; float:right; text-align:left; vertical-align: middle; display:table"> -->
+<!--                     <div style="display:table-cell;vertical-align: middle"> -->
+<!--                         <img src="./images/aula2/titulo.svg" -->
+<!--                              style="width:400px;height:auto;"> -->
+<!--                     </div> -->
+<!--                 </div> -->
+<!--             </div> -->
+<!--         </section> -->
 
         <section>
             <h3 style="font-size:40px;vertical-align:top;text-align:left;height:50px">Matriz de Transformação Homogênea</h3>
@@ -1649,8 +1649,8 @@ D = ub.Utils.trn(s)
 
             <div style="width:1200px;height:800px">
                 <div style="width: 52%; float:left; font-size:25px; text-align:justify; text-justify: inter-word">
-                    <p><b class="itext">Existe outra maneira de interpretar a mesma transformação!</b></p>
-                    <p>Chegaremos ao <b class="itext">mesmo</b> referencial final \(H\) se lermos <b class="itext">da esquerda para a direita, mas considerando que as transformações são interpretadas no referencial atual em vez de \(\mathcal{F}_0\)!</b></p>
+                    Existe <p><b class="itext">outra maneira</b> de interpretar a mesma transformação!</p>
+                    <p>Chegaremos ao <b class="itext">mesmo referencial final \(H\)</b> se lermos <b class="itext">da esquerda para a direita</b>, mas considerando que as transformações são interpretadas <b class="itext">no referencial atual (corrente) em vez de \(\mathcal{F}_0\)!</b></p>
                     <p>Observe a animação ao lado com a sequência de transformações.</p>
                     <p>Note que o referencial final é o <b class="itext">mesmo!</b> Apenas os referenciais intermediários mudam.</p>
                 </div>
